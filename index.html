@@ -33,15 +33,17 @@
 
       <main>
         <div>
-          <h2 class="weather-app-date">Day & Time</h2>
+          <h2 class="weather-app-date" id="time"></h2>
           <h1 class="weather-app-city" id="city"></h1>
+          <h2 class="weather-app-condition" id="weather-condition"></h2>
         </div>
         <div class="weather-app-data">
           <div>
             <p class="weather-app-details">
-              Condition
               <br />
-              Humidity: <strong>%</strong>, Wind <strong>km/h</strong>
+              Humidity: <strong><span id="weather-humidity"></span></strong>
+              <br />
+              Wind: <strong><span id="weather-wind"></span></strong>
             </p>
           </div>
           <div class="weather-app-temperature-container">
