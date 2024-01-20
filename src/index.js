@@ -27,6 +27,99 @@ function refreshWeather(response) {
       src="${response.data.condition.icon_url}"
       class="weather-app-icon"
     />`;
+
+  let weatherConditionBackground = response.data.condition.icon;
+  let backgroundElement = document.querySelector("body");
+
+  if (weatherConditionBackground === "clear-sky-day") {
+    backgroundElement.classList.remove(
+      "cloudy",
+      "rainy",
+      "thunderstorm",
+      "snow",
+      "mist",
+      "night"
+    );
+    backgroundElement.classList.add("sunny");
+  } else if (
+    weatherConditionBackground === "few-clouds-day" ||
+    weatherConditionBackground === "scattered-clouds-day" ||
+    weatherConditionBackground === "broken-clounds-day"
+  ) {
+    backgroundElement.classList.remove(
+      "sunny",
+      "rainy",
+      "thunderstorm",
+      "snow",
+      "mist",
+      "night"
+    );
+    backgroundElement.classList.add("cloudy");
+  } else if (
+    weatherConditionBackground === "shower-rain-day" ||
+    weatherConditionBackground === "rain-day"
+  ) {
+    backgroundElement.classList.remove(
+      "sunny",
+      "cloudy",
+      "rainy",
+      "thunderstorm",
+      "snow",
+      "mist",
+      "night"
+    );
+    backgroundElement.classList.add("rainy");
+  } else if (weatherConditionBackground === "thunderstorm-day") {
+    backgroundElement.classList.remove(
+      "sunny",
+      "cloudy",
+      "rainy",
+      "snow",
+      "mist",
+      "night"
+    );
+    backgroundElement.classList.add("thunderstorm");
+  } else if (weatherConditionBackground === "snow-day") {
+    backgroundElement.classList.remove(
+      "sunny",
+      "cloudy",
+      "rainy",
+      "thunderstorm",
+      "mist",
+      "night"
+    );
+    backgroundElement.classList.add("snow");
+  } else if (weatherConditionBackground === "mist-day") {
+    backgroundElement.classList.remove(
+      "sunny",
+      "cloudy",
+      "rainy",
+      "thunderstorm",
+      "snow",
+      "night"
+    );
+    backgroundElement.classList.add("mist");
+  } else if (
+    weatherConditionBackground === "clear-sky-night" ||
+    weatherConditionBackground === "few-clouds-night" ||
+    weatherConditionBackground === "scattered-clouds-night" ||
+    weatherConditionBackground === "broken-clouds-night" ||
+    weatherConditionBackground === "shower-rain-night" ||
+    weatherConditionBackground === "rain-night" ||
+    weatherConditionBackground === "thunderstorm-night" ||
+    weatherConditionBackground === "snow-night" ||
+    weatherConditionBackground === "mist-night"
+  ) {
+    backgroundElement.classList.remove(
+      "sunny",
+      "cloudy",
+      "rainy",
+      "thunderstorm",
+      "snow",
+      "mist"
+    );
+    backgroundElement.classList.add("night");
+  }
 }
 
 function formatDate(date) {
