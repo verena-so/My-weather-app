@@ -44,7 +44,7 @@ function refreshWeather(response) {
   } else if (
     weatherConditionBackground === "few-clouds-day" ||
     weatherConditionBackground === "scattered-clouds-day" ||
-    weatherConditionBackground === "broken-clounds-day"
+    weatherConditionBackground === "broken-clouds-day"
   ) {
     backgroundElement.classList.remove(
       "sunny",
