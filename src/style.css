@@ -124,20 +124,23 @@ main {
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: 50px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .weather-forecast-date {
   font-size: 20px;
 }
 
-.weather-forecast-temperatures {
-  font-size: 15px;
+.weather-forecast-icon {
+  font-size: 30px;
 }
 
-.weather-forecast-temperatures-min {
-  opacity: 0.6;
+.weather-forecast-temperature {
+  font-size: 17px;
+  display: inline;
 }
 
 footer {
