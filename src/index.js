@@ -30,6 +30,7 @@ function refreshWeather(response) {
 
   let weatherConditionBackground = response.data.condition.icon;
   let backgroundElement = document.querySelector("body");
+  let buttonElement = document.querySelector("#search-form-button");
 
   if (weatherConditionBackground === "clear-sky-day") {
     backgroundElement.classList.remove(
@@ -41,6 +42,7 @@ function refreshWeather(response) {
       "night"
     );
     backgroundElement.classList.add("sunny");
+    buttonElement.style.backgroundColor = "#A1BFC5";
   } else if (
     weatherConditionBackground === "few-clouds-day" ||
     weatherConditionBackground === "scattered-clouds-day" ||
@@ -55,6 +57,7 @@ function refreshWeather(response) {
       "night"
     );
     backgroundElement.classList.add("cloudy");
+    buttonElement.style.backgroundColor = "#27262C";
   } else if (
     weatherConditionBackground === "shower-rain-day" ||
     weatherConditionBackground === "rain-day"
@@ -69,6 +72,7 @@ function refreshWeather(response) {
       "night"
     );
     backgroundElement.classList.add("rainy");
+    buttonElement.style.backgroundColor = "#347295";
   } else if (weatherConditionBackground === "thunderstorm-day") {
     backgroundElement.classList.remove(
       "sunny",
@@ -79,6 +83,7 @@ function refreshWeather(response) {
       "night"
     );
     backgroundElement.classList.add("thunderstorm");
+    buttonElement.style.backgroundColor = "#5D74B0";
   } else if (weatherConditionBackground === "snow-day") {
     backgroundElement.classList.remove(
       "sunny",
@@ -89,6 +94,7 @@ function refreshWeather(response) {
       "night"
     );
     backgroundElement.classList.add("snow");
+    buttonElement.style.backgroundColor = "#7c7f84";
   } else if (weatherConditionBackground === "mist-day") {
     backgroundElement.classList.remove(
       "sunny",
@@ -99,6 +105,7 @@ function refreshWeather(response) {
       "night"
     );
     backgroundElement.classList.add("mist");
+    buttonElement.style.backgroundColor = "#C7C5B9";
   } else if (
     weatherConditionBackground === "clear-sky-night" ||
     weatherConditionBackground === "few-clouds-night" ||
@@ -119,6 +126,7 @@ function refreshWeather(response) {
       "mist"
     );
     backgroundElement.classList.add("night");
+    buttonElement.style.backgroundColor = "#030D17";
   }
 
   getForecast(response.data.city);
@@ -171,7 +179,7 @@ function formatDay(timestamp) {
 
 function getForecast(city) {
   let apiKey = "57eafdf333f32b7f37o90e19f0tdeb44";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric;`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayForecast);
 }

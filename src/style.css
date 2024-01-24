@@ -45,15 +45,15 @@ header {
 }
 
 .search-form-button {
-  background: #3d4c53;
+  background: #fff;
   padding: 12px 22px;
   margin-left: 5px;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 1px;
   border: none;
   border-radius: 8px;
-  color: #fafafa;
+  color: #fff;
 }
 
 main {
@@ -74,10 +74,10 @@ main {
 
 .weather-app-city {
   color: #000;
-  margin: 0;
+  margin: 0 0 7px 0;
   font-family: "DM Serif Display", serif;
   font-size: 55px;
-  line-height: 66px;
+  line-height: 67px;
 }
 
 .weather-app-condition {
@@ -85,6 +85,7 @@ main {
   font-size: 26px;
   line-height: 30px;
   font-weight: 400;
+  opacity: 0.7;
 }
 
 .weather-app-details {
@@ -95,7 +96,7 @@ main {
 }
 
 .weather-app-details strong {
-  color: #414a4e;
+  opacity: 0.7;
   font-weight: 400;
 }
 
