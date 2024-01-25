@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <div class="weather-app">
+    <div class="weather-app-main-container">
       <header>
         <div class="search-container">
           <form class="search-form" id="search-form">
@@ -38,25 +38,33 @@
 
       <main>
         <div>
-          <h2 class="weather-app-date" id="time"></h2>
-          <h1 class="weather-app-city" id="city"></h1>
-          <h2 class="weather-app-condition" id="weather-condition"></h2>
-        </div>
-        <div class="weather-app-data">
-          <div>
-            <p class="weather-app-details">
-              Humidity: <strong><span id="weather-humidity"></span></strong>
-              <br />
-              Wind: <strong><span id="weather-wind"></span></strong>
-            </p>
-          </div>
-          <div class="weather-app-temperature-container">
-            <div id="icon"></div>
-            <div class="weather-app-temperature" id="temperature"></div>
-            <div class="weather-app-unit">°C</div>
+          <div class="current-day-container">
+            <div class="container-date-city">
+              <h2 class="weather-app-date" id="time"></h2>
+              <h1 class="weather-app-city" id="city"></h1>
+            </div>
+            <div class="container-temperature">
+              <div class="weather-app-temperature-container">
+                <div id="icon"></div>
+                <div class="weather-app-temperature" id="temperature"></div>
+                <div class="weather-app-unit">°C</div>
+              </div>
+            </div>
           </div>
         </div>
 
+        <div class="weather-app-data">
+          <div class="weather-app-details">
+            Condition: <strong><span id="weather-condition"></span></strong>
+          </div>
+          <div class="weather-app-details">
+            Humidity: <strong><span id="weather-humidity"></span></strong>
+          </div>
+          <div class="weather-app-details">
+            Wind: <strong><span id="weather-wind"></span></strong>
+          </div>
+        </div>
+        <h2 class="forecast-headline">5-Day Forecast</h2>
         <div class="weather-forecast" id="forecast"></div>
       </main>
 
