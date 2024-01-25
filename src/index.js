@@ -16,7 +16,7 @@ function refreshWeather(response) {
 
   let windElement = document.querySelector("#weather-wind");
   let windOutput = response.data.wind.speed;
-  windElement.innerHTML = `${response.data.wind.speed} km/h`;
+  windElement.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
 
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
@@ -172,7 +172,7 @@ function handleSearchSubmit(event) {
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   return days[date.getDay()];
 }
