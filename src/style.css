@@ -1,24 +1,29 @@
 body {
-  background: #fafafa;
   font-family: "Poppins", sans-serif;
   color: rgba(0, 0, 0, 0.9);
+  background: #fafafa;
 }
 
 a {
-  color: #546d71;
+  color: #302f2f;
+  text-decoration: none;
 }
 
-.weather-app {
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.weather-app-main-container {
   background: #fff;
   max-width: 600px;
-  margin: 30px auto;
+  margin: 40px auto;
   padding: 30px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 4px;
 }
 
 header {
-  border-bottom: 1px solid #f5f3ee;
   padding: 0 0 30px 0;
 }
 
@@ -32,10 +37,10 @@ header {
   background: #fafafa;
   border: none;
   border-radius: 4px;
-  width: 83%;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.6px;
+  width: 83%;
   padding: 10px 20px;
 }
 
@@ -46,21 +51,21 @@ header {
 
 .search-form-button {
   background: #fff;
-  padding: 12px 22px;
-  margin-left: 5px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  color: #fff;
   border: none;
   border-radius: 8px;
-  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 12px 22px;
+  margin-left: 5px;
 }
 
 main {
   padding: 30px;
 }
 
-.weather-app-data {
+.current-day-container {
   display: flex;
   justify-content: space-between;
 }
@@ -74,30 +79,10 @@ main {
 
 .weather-app-city {
   color: #000;
-  margin: 0 0 7px 0;
   font-family: "DM Serif Display", serif;
   font-size: 55px;
   line-height: 67px;
-}
-
-.weather-app-condition {
-  margin: 5px 0;
-  font-size: 26px;
-  line-height: 30px;
-  font-weight: 400;
-  opacity: 0.7;
-}
-
-.weather-app-details {
-  margin-top: 59px;
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: 500;
-}
-
-.weather-app-details strong {
-  opacity: 0.7;
-  font-weight: 400;
+  margin: 0 0 7px 0;
 }
 
 .weather-app-temperature-container {
@@ -107,25 +92,52 @@ main {
 .weather-app-icon {
   height: 100px;
   width: 100px;
-  margin-top: 33px;
+  margin-top: 6px;
 }
 
 .weather-app-temperature {
   font-family: "DM Serif Display", serif;
-  font-size: 111px;
+  font-size: 118px;
+  font-weight: 300;
   margin-left: 10px;
   margin-right: 2px;
-  font-weight: 300;
+  margin-top: -31px;
 }
 
 .weather-app-unit {
-  margin-top: 35px;
+  margin-top: 6px;
   font-size: 22px;
   font-weight: 500;
 }
 
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f3ee;
+  padding: 0 0 43px 0;
+}
+
+.weather-app-details {
+  margin-top: 25px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.weather-app-details strong {
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.forecast-headline {
+  font-family: "DM Serif Display", serif;
+  text-align: center;
+  font-size: 39px;
+  margin: 38px 0 20px 0;
+}
+
 .weather-forecast {
-  margin-top: 50px;
+  margin-top: 34px;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -151,11 +163,11 @@ main {
 }
 
 footer {
-  border-top: 1px solid #f5f3ee;
-  padding: 30px 0 0 0;
   text-align: center;
   font-size: 10px;
   color: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid #f5f3ee;
+  padding: 30px 0 0 0;
 }
 
 .sunny {
